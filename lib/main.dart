@@ -6,6 +6,11 @@ void main() => runApp(const XylophoneApp());
 class XylophoneApp extends StatelessWidget {
   const XylophoneApp({Key? key}) : super(key: key);
 
+  void playSound(int soundNumber) {
+    final player = AudioCache();
+    player.play('note$soundNumber.wav');
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,9 +27,7 @@ class XylophoneApp extends StatelessWidget {
                   height: 100,
                   child: TextButton(
                     onPressed: () {
-                      final player = AudioCache();
-                      // call this method when desired
-                      player.play('note1.wav');
+                      playSound(1);
                     },
                     child: const Text(''),
                   ),
@@ -35,9 +38,7 @@ class XylophoneApp extends StatelessWidget {
                   height: 100,
                   child: TextButton(
                     onPressed: () {
-                      final player = AudioCache();
-                      // call this method when desired
-                      player.play('note2.wav');
+                      playSound(2);
                     },
                     child: const Text(''),
                   ),
@@ -48,9 +49,7 @@ class XylophoneApp extends StatelessWidget {
                   height: 100,
                   child: TextButton(
                     onPressed: () {
-                      final player = AudioCache();
-                      // call this method when desired
-                      player.play('note3.wav');
+                      playSound(3);
                     },
                     child: const Text(''),
                   ),
@@ -61,9 +60,7 @@ class XylophoneApp extends StatelessWidget {
                   height: 100,
                   child: TextButton(
                     onPressed: () {
-                      final player = AudioCache();
-                      // call this method when desired
-                      player.play('note4.wav');
+                      playSound(4);
                     },
                     child: const Text(''),
                   ),
@@ -74,9 +71,7 @@ class XylophoneApp extends StatelessWidget {
                   height: 100,
                   child: TextButton(
                     onPressed: () {
-                      final player = AudioCache();
-                      // call this method when desired
-                      player.play('note5.wav');
+                      playSound(5);
                     },
                     child: const Text(''),
                   ),
@@ -87,9 +82,7 @@ class XylophoneApp extends StatelessWidget {
                   height: 100,
                   child: TextButton(
                     onPressed: () {
-                      final player = AudioCache();
-                      // call this method when desired
-                      player.play('note6.wav');
+                      playSound(6);
                     },
                     child: const Text(''),
                   ),
@@ -100,9 +93,7 @@ class XylophoneApp extends StatelessWidget {
                   height: 100,
                   child: TextButton(
                     onPressed: () {
-                      final player = AudioCache();
-                      // call this method when desired
-                      player.play('note7.wav');
+                      playSound(7);
                     },
                     child: const Text(''),
                   ),
